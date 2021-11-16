@@ -67,7 +67,6 @@ class TaskController extends Controller
 
         return view('list',['query'=> $task],['taskList'=> $tasks]);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -88,7 +87,13 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $updatear = $request->get('update');
+
+        Task::where('id','like', $id)
+            ->update(['task' => $updatear]);
+
+        return redirect('/list');
     }
 
     /**

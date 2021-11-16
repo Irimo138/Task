@@ -7,7 +7,7 @@
     <title>List</title>
 </head>
 <body>
-
+    @extends('update')
     @extends('search')
     @extends('show')
     @extends('show2')

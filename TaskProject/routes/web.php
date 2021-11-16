@@ -28,3 +28,5 @@ Route::get('/task', [TaskController::class,'showForm']);
 
 Route::get('/show', [TaskController::class,'show']);
 
+Route::put('/update/{id}', [TaskController::class,'update']);
+
